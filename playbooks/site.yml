@@ -1,0 +1,7 @@
+---
+- name: Configure managed Linux servers
+  hosts: managed
+  become: true
+
+  roles:
+    - nginx

@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: nginx
+  author: Muhammad Farhan Ali
+  description: Install and configure Nginx on Ubuntu Linux
+  license: MIT
+  min_ansible_version: "2.16"
+
+dependencies: []
