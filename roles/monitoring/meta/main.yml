@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: monitoring
+  author: Muhammad Farhan Ali
+  description: Install and manage Prometheus Node Exporter
+  license: MIT
+  min_ansible_version: "2.16"
+
+dependencies: []

@@ -7,4 +7,5 @@
     - common
     - users
     - security
+    - monitoring
     - nginx
