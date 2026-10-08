@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: users
+  author: Muhammad Farhan Ali
+  description: Manage Linux users and their basic account configuration
+  license: MIT
+  min_ansible_version: "2.16"
+
+dependencies: []

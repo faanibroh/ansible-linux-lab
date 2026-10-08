@@ -1,0 +1,11 @@
+---
+users_manage_users: true
+
+users:
+  - name: devops
+    shell: /bin/bash
+    groups:
+      - sudo
+    append: true
+    create_home: true
+    state: present
