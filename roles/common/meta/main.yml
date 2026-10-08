@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: common
+  author: Muhammad Farhan Ali
+  description: Baseline Linux configuration and common administration packages
+  license: MIT
+  min_ansible_version: "2.16"
+
+dependencies: []

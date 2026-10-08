@@ -1,0 +1,14 @@
+---
+common_packages:
+  - curl
+  - wget
+  - unzip
+  - vim
+  - git
+  - htop
+  - net-tools
+  - ca-certificates
+
+common_timezone: UTC
+
+common_manage_timezone: true
