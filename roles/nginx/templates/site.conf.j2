@@ -1,0 +1,15 @@
+server {
+    listen {{ nginx_port }};
+    listen [::]:{{ nginx_port }};
+
+    server_name {{ nginx_server_name }};
+
+{% for header in nginx_security_headers %}
+    add_header {{ header }} always;
+{% endfor %}
+
+    location / {
+        default_type text/plain;
+        return 200 "Hello from Ansible-managed Nginx!\n";
+    }
+}

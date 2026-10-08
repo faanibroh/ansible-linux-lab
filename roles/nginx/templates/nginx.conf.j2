@@ -1,11 +1,25 @@
-server {
-    listen 80;
-    listen [::]:80;
+user www-data;
+worker_processes {{ nginx_worker_processes }};
 
-    server_name _;
+pid /run/nginx.pid;
 
-    location / {
-        default_type text/plain;
-        return 200 "Hello from Ansible-managed Nginx!\n";
-    }
+events {
+    worker_connections {{ nginx_worker_connections }};
+}
+
+http {
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    access_log {{ nginx_access_log }};
+    error_log {{ nginx_error_log }};
+
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+
+    client_max_body_size {{ nginx_client_max_body_size }};
+
+    include /etc/nginx/sites-enabled/*;
 }
