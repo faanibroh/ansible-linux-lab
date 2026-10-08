@@ -1,0 +1,11 @@
+---
+security_manage_ssh: true
+
+security_ssh_port: 22
+security_ssh_permit_root_login: "no"
+security_ssh_password_authentication: "no"
+security_ssh_pubkey_authentication: "yes"
+security_ssh_permit_empty_passwords: "no"
+security_ssh_x11_forwarding: "no"
+security_ssh_max_auth_tries: 4
+security_ssh_login_grace_time: 30

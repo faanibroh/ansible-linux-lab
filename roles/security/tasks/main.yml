@@ -1,0 +1,27 @@
+---
+- name: Install OpenSSH server
+  ansible.builtin.apt:
+    name: openssh-server
+    state: present
+    update_cache: true
+    cache_valid_time: 3600
+  when: security_manage_ssh
+
+- name: Deploy SSH security drop-in configuration
+  ansible.builtin.template:
+    src: 99-ansible-security.conf.j2
+    dest: /etc/ssh/sshd_config.d/99-ansible-security.conf
+    owner: root
+    group: root
+    mode: '0644'
+  notify:
+    - Validate SSH configuration
+    - Restart SSH service
+  when: security_manage_ssh
+
+- name: Ensure SSH service is enabled and running
+  ansible.builtin.service:
+    name: ssh
+    state: started
+    enabled: true
+  when: security_manage_ssh

@@ -1,0 +1,9 @@
+---
+galaxy_info:
+  role_name: security
+  author: Muhammad Farhan Ali
+  description: Linux SSH security hardening and baseline security configuration
+  license: MIT
+  min_ansible_version: "2.16"
+
+dependencies: []
