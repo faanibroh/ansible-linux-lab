@@ -7,7 +7,7 @@
     append: "{{ item.append }}"
     create_home: "{{ item.create_home }}"
     state: "{{ item.state }}"
-  loop: "{{ users }}"
+  loop: "{{ users_accounts }}"
   loop_control:
     label: "{{ item.name }}"
   when: users_manage_users

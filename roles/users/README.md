@@ -16,7 +16,7 @@ The role uses the following variables:
 
     users_manage_users: true
 
-    users:
+    users_accounts:
       - name: devops
         shell: /bin/bash
         groups:

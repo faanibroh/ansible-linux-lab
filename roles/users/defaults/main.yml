@@ -1,7 +1,7 @@
 ---
 users_manage_users: true
 
-users:
+users_accounts:
   - name: devops
     shell: /bin/bash
     groups:
